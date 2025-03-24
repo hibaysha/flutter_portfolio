@@ -14,21 +14,12 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Row(
           children: [
-            Icon(
-              Icons.circle_sharp,
-              size: 12,
-              color: Colors.black,
-            ),
-            SizedBox(
-              width: 10,
-            ),
             Text(
-              "Untitled UI",
+              "Portfolio Website",
               style: TextStyle(color: Colors.black),
             )
           ],
         ),
-        // foregroundColor: Colors.black,
         backgroundColor: Colors.white,
       ),
       body: SingleChildScrollView(
@@ -36,39 +27,24 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: MediaQuery.of(context).size.width,
-              height: 200,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  colors: [
-                    kGradient1,
-                    kGradient2,
-                  ],
-                ),
-              ),
-              child: Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: CircleAvatar(
-                    radius: 60,
-                    backgroundImage: AssetImage(imagePath),
+                width: MediaQuery.of(context).size.width,
+                height: 100,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      kGradient1,
+                      kGradient2,
+                    ],
                   ),
                 ),
-              ),
-            ),
-            Center(
-                child: Text(
-              name,
-              style: kTitleText,
-            )),
-            Center(
-                child: Text(
-              "@$username",
-              style: kSubTitleText,
-            )),
+                child: Center(
+                  child: Text(
+                    name,
+                    style: kTitleText,
+                  ),
+                )),
             const SizedBox(
               height: 10,
             ),
@@ -191,21 +167,6 @@ class HomeScreen extends StatelessWidget {
                                           const SizedBox(
                                             height: 10,
                                           ),
-                                          Row(
-                                            children: [
-                                              Text(website),
-                                              const SizedBox(
-                                                width: 5,
-                                              ),
-                                              const Icon(
-                                                Icons.launch,
-                                                size: 16,
-                                              )
-                                            ],
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
                                           Text(
                                             "Portfolio",
                                             style: kSubTitleText,
@@ -299,10 +260,6 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                         Row(
                                           children: [
-                                            const Icon(
-                                              Icons.circle,
-                                              size: 16,
-                                            ),
                                             const SizedBox(
                                               width: 5,
                                             ),
@@ -313,25 +270,6 @@ class HomeScreen extends StatelessWidget {
                                         ),
                                         const SizedBox(
                                           height: 10,
-                                        ),
-                                        Text(
-                                          "Website",
-                                          style: kSubTitleText,
-                                        ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
-                                          children: [
-                                            Text(website),
-                                            const SizedBox(
-                                              width: 5,
-                                            ),
-                                            const Icon(
-                                              Icons.launch,
-                                              size: 16,
-                                            )
-                                          ],
                                         ),
                                         const SizedBox(
                                           height: 10,
@@ -404,6 +342,9 @@ class HomeScreen extends StatelessWidget {
                           projectData: projectList[index],
                         );
                       })),
+            ),
+            const SizedBox(
+              height: 30,
             ),
           ],
         ),
